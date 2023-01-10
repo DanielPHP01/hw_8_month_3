@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chooserFragment">
+
+    <fragment
+        android:id="@+id/chooserFragment"
+        android:name="com.example.hw_8_month_3.fragment.ChooserFragment"
+        android:label="fragment_chooser"
+        tools:layout="@layout/fragment_chooser">
+        <action
+            android:id="@+id/action_chooserFragment_to_pizzaFragment"
+            app:destination="@id/pizzaFragment" />
+        <action
+            android:id="@+id/action_chooserFragment_to_drinksFragment"
+            app:destination="@id/drinksFragment" />
+        <action
+            android:id="@+id/action_chooserFragment_to_sushiFragment"
+            app:destination="@id/sushiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pizzaFragment"
+        android:name="com.example.hw_8_month_3.fragment.PizzaFragment"
+        android:label="fragment_pizza"
+        tools:layout="@layout/fragment_pizza">
+        <action
+            android:id="@+id/action_pizzaFragment_to_buyFragment"
+            app:destination="@id/buyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/drinksFragment"
+        android:name="com.example.hw_8_month_3.fragment.DrinksFragment"
+        android:label="fragment_drinks"
+        tools:layout="@layout/fragment_drinks">
+        <action
+            android:id="@+id/action_drinksFragment_to_buyFragment"
+            app:destination="@id/buyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sushiFragment"
+        android:name="com.example.hw_8_month_3.fragment.SushiFragment"
+        android:label="fragment_sushi"
+        tools:layout="@layout/fragment_sushi">
+        <action
+            android:id="@+id/action_sushiFragment_to_buyFragment"
+            app:destination="@id/buyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.example.hw_8_month_3.fragment.BuyFragment"
+        android:label="fragment_buy"
+        tools:layout="@layout/fragment_buy" />
+</navigation>
